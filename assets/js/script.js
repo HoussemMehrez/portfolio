@@ -119,6 +119,52 @@ for (let i = 0; i < filterBtn.length; i++) {
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwa1pWzRLhtKIYGlnxXcJPo6HwxRZRVaby-qmH3g_eE-19-KEi-Gh7yatfQke7i7tF1Fg/exec'
+
+
+
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+    // Activer/désactiver le bouton en fonction de la validité du formulaire
+    formInputs.forEach(input => {
+      input.addEventListener("input", () => {
+        if (form.checkValidity()) {
+          formBtn.removeAttribute("disabled");
+        } else {
+          formBtn.setAttribute("disabled", "");
+        }
+      });
+    });
+
+
+   // Soumission du formulaire
+   form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    fetch(scriptURL, { 
+      method: 'POST', 
+      body: new FormData(form)
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("Thank you! Your form is submitted successfully.");
+        form.reset();
+        formBtn.setAttribute("disabled", "");
+      } else {
+        throw new Error('Network response was not ok.');
+      }
+    })
+    .catch(error => {
+      console.error('Error!', error.message);
+      alert("An error occurred while submitting the form.");
+    });
+  });
 
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {

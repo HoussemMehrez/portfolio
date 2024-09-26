@@ -5,12 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>Portfolio</title>
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
   <!--
     - custom css link
@@ -48,7 +47,7 @@
         <div class="info-content">
           <h1 class="name" title="Houssem Mehrez">Houssem Mehrez</h1>
 
-          <p class="title">Web developer</p>
+          <p class="title">Software engineer</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -116,19 +115,19 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://www.facebook.com/profile.php?id=100009335203607" class="social-link">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
+            <a href="https://www.linkedin.com/in/houssem-mehrez-846319292/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://www.instagram.com/housem_mehrez/" class="social-link">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
@@ -591,6 +590,23 @@
 
               </a>
             </li>
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://www.figma.com/proto/d5DHE5AWnCpEqdkwY3WVCI/Untitled?node-id=1-25&node-type=frame&t=Pt1MGnsioLbqeHTD-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/agence.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">website travel agency</h3>
+
+                <p class="project-category">Web Design</p>
+
+              </a>
+            </li>
 
             
 
@@ -631,24 +647,20 @@
         <section class="contact-form">
 
           <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
+          <form method="post" action="" class="form" data-form>
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
+    
               <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
-
+    
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
+    
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
-
           </form>
-
         </section>
 
       </article>
